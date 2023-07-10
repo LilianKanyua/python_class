@@ -1,7 +1,14 @@
 from django.contrib import admin
-from .models import Cart
+from .models import Customer
 
 # Register your models here.
-class Cart_admin(admin.ModelAdmin):
-    list_display = ("date","price","image","quantity","product_name")
-admin.site.register(Cart,Cart_admin)
+
+
+
+class CustomerAdmin(admin.ModelAdmin):
+    customer= ("first_name","last_name","email","phone","address")
+
+
+# Register your models here.
+
+admin.site.register(Customer,CustomerAdmin)
